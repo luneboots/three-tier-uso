@@ -98,9 +98,9 @@ it('verify data', async () => {
     expect(data.body.some(e => e.name === user3.name)).toBeTruthy();
 })
 
-var server = app.listen(3000, function(){
-    console.log("Running on port 3000...");
-});
+// var server = app.listen(3000, function(){
+//     console.log("Running on port 3000...");
+// });
 
 afterAll(done => {
     server.close();
