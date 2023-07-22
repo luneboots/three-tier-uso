@@ -1,17 +1,16 @@
 const supertest = require('supertest');
 const app       = require('./http_server');
-const require   = supertest(app);
+const request   = supertest(app);
 
-if ('Hello World!', async done => {
-    expect(1).toBe(1);
-    done();
+it('Hello World!', async () => {
+    const response = await request.get('/');
+    expect(response.status).toBe(200);
 });
 
-var server = app.listen(3000,function(){
-    console.log("Running on port 3000");
+var server = app.listen(3000, function(){
+    console.log("Running on port 3000...");
 });
 
-afterAll(done => {
+afterAll(() => {
     server.close();
-    done();
 });
