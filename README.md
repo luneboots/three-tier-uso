@@ -1,5 +1,5 @@
 # three-tier-uso
-Three-tier application to add users using Faker.js data both locally and on vm DigitalOcean
+Three-tier application to add users using Faker.js data locally
 
 # how to use
 To install this project, follow these steps:
