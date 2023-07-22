@@ -1,7 +1,7 @@
 {
-  "name": "littletiers",
+  "name": "three_tier_uso",
   "version": "1.0.0",
-  "description": "little tiers",
+  "description": "three tier application to add users using fake data",
   "main": "http_server.js",
   "scripts": {
     "test": "jest"
@@ -17,6 +17,6 @@
     "supertest": "^6.3.3"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0"
+    "@faker-js/faker": "^8.0.2"
   }
 }
