@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "name": "Norris Powlowski",
+      "dob": "1959-1-18",
+      "email": "Norris56@yahoo.com",
+      "username": "Norris_Powlowski",
+      "password": "jg10a9C_X86wwpo",
+      "phone": "801.281.1498",
+      "streetaddress": "993 Price Creek",
+      "citystatezip": "Creminshire, ME 53543-6998",
+      "latitude": "21.9736",
+      "longitude": "-30.8324",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/442.jpg"
+    }
+  ]
+}

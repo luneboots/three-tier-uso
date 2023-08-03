@@ -10,11 +10,14 @@ const puppeteer = require('puppeteer');
 
         //go to addUser.html and click addUser
         await page.goto('http://localhost:3000/addUser.html');
-        await page.click('#addUser');
+        const addUserButton = await page.waitForSelector('#addUser', {timeout: 30000});
+        await addUserButton.click();
+        page.on('console', (msg) => console.log('PAGE LOG:', msg.text()));
 
         //go to data.html and clicik showAllData
         await page.goto('http://localhost:3000/data.html');
-        await page.click('#showAllData');
+        const showDataButton = await page.waitForSelector('#showAllData', {timeout: 10000});
+        await showDataButton.click();
 
         //wait for data to populate status div
         await page.waitForSelector('#status:not(:empty)');
