@@ -6,6 +6,8 @@ const adapter = new fs('db.json');
 const db      = low(adapter);
 const cors    = require('cors');
 const { faker } = require('@faker-js/faker');
+const port = process.env.PORT || 3000;
+require('dotenv').config();
 
 // allow cross-origin resource sharing (CORS)
 app.use(cors());
@@ -49,6 +51,7 @@ app.post('/add', function(req, res){
 
 // start server
 // -----------------------
-app.listen(3000, function(){
-    console.log('Running on port 3000!')
-})
+app.listen(port, () => {
+    console.log(`Server is running on ${port}`);
+  });
+  
