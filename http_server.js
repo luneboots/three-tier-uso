@@ -6,8 +6,8 @@ const adapter = new fs('db.json');
 const db      = low(adapter);
 const cors    = require('cors');
 const { faker } = require('@faker-js/faker');
-const port = process.env.PORT || 3000;
 require('dotenv').config();
+const port = process.env.PORT || 3000;
 
 // allow cross-origin resource sharing (CORS)
 app.use(cors());
