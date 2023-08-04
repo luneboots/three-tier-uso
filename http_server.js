@@ -1,13 +1,14 @@
 const express = require('express');
 const app     = express();
 const low     = require('lowdb');
-const fs      = require('lowdb/adapters/FileSync');
-const adapter = new fs('db.json');
+const adapter = new FileSync('db.json');
 const db      = low(adapter);
 const cors    = require('cors');
 const { faker } = require('@faker-js/faker');
 require('dotenv').config();
 const port = process.env.PORT || 3000;
+
+const FileSync = require("lowdb/adapters/FileSync");
 
 // allow cross-origin resource sharing (CORS)
 app.use(cors());
@@ -48,6 +49,16 @@ app.post('/add', function(req, res){
     console.log(db.get('users').value());
     res.send(db.get('users').value());
 });
+
+app.get("/search", (req, res) => {
+    const searchQuery = req.query.query;
+  
+    const results = db.get("users").filter(user => {
+      return user.name.includes(searchQuery); 
+    }).value();
+  
+    res.json(results);
+  });
 
 // start server
 // -----------------------

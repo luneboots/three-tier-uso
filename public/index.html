@@ -18,9 +18,9 @@
           <li class="nav-item">
             <a class="nav-link" href="addUser.html">Add User</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="addUsers.html">Add Users</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="allUsers.html">View Users</a>
           </li>
@@ -33,9 +33,28 @@
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
+      <card>
+
+      </card>
+
     </div>
   </nav>       
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script>
+  document.querySelector("form[role='search']").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    const searchQuery = document.querySelector(".form-control").value;
+
+    try {
+      const response = await fetch(`/search?query=${searchQuery}`);
+      const data = await response.json();
+
+    } catch (error) {
+      console.error("Error fetching search results:", error);
+    }
+  });
+</script>
 </body>
 </html>
