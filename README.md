@@ -15,4 +15,6 @@ NOTE: I currently have it configured through DigitalOcean, a cloud platform that
 Add lots of fake users with fake data, see them pop up!
 
 # future possibilities
-*styling* to come
+[X] General Styling
+[ ] Search bar funcitonality
+[ ] Page styling
