@@ -29,7 +29,7 @@ body{
 }
 
 .card-body {
-    padding: 1.25rem;
+    padding: 1rem;
 }
 
 .card-title {
@@ -106,7 +106,7 @@ body{
   
   .card-home {
     padding: 10px;
-    margin: 50px 100px 0 100px; 
+    margin: 50px 50px 50px 50px; 
     width: auto; 
     height: auto; 
     background-color: white;
@@ -142,4 +142,35 @@ body{
     max-height: 100%;
     margin-bottom: 20px; 
     border-radius: 50%;
+}
+
+.search-error{
+  color:red;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Classes modified for large screen size */
+@media screen and (min-width: 968px){
+  body{
+    margin: 3rem 0;
+  }
+}
+/* For small devices */
+@media screen and (max-width: 375px){
+   body{
+    margin:0;
+    padding: 1rem;
+  }
+  .grid-container{
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
+  }
+  .card-body {
+    padding: 0rem;
+}
+  .card-home{
+    width: calc(100% - 20px);
+    margin: 10px auto;
+}
 }
